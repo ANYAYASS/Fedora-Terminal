@@ -1,5 +1,3 @@
-# Fedora-Terminal
-
 **Update System**
 ```shell
 sudo dnf update --refresh
@@ -39,12 +37,17 @@ sudo dnf install \
   https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ```
 
+**AppStream metadata**
+```shell
+sudo dnf groupupdate core
+```
+
 **Install Flatpak and Flathub Repository**
 ```shell
 sudo dnf install -y flatpak &&
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
- 
+
 **Add Mullvad / Tor Browser to your desktop's application menu**
 ```shell
 ./start-mullvad-browser.desktop --register-app
@@ -53,7 +56,3 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 ./start-tor-browser.desktop --register-app
 ```
 
-**AppStream metadata**
-```shell
-sudo dnf groupupdate core
-```
