@@ -11,12 +11,12 @@ sudo dnf update --refresh -y && sudo dnf distro-sync --refresh -y && sudo dnf au
  
 **Upgrade System**
 ```shell
-sudo dnf upgrade --refresh
-sudo dnf install dnf-plugin-system-upgrade
+sudo dnf upgrade --refresh -y
+sudo dnf install dnf-plugin-system-upgrade -y
 sudo dnf system-upgrade download --releasever=40
 sudo dnf system-upgrade reboot
 ```
- 
+
 **Configure dnf.conf**
 ```shell
 sudo tee -a /etc/dnf/dnf.conf << EOF
@@ -55,4 +55,3 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 ```shell
 ./start-tor-browser.desktop --register-app
 ```
-
