@@ -1,23 +1,4 @@
-**Update System**
-```shell
-sudo dnf update --refresh
-sudo dnf distro-sync --refresh
-sudo dnf autoremove
-```
-
-```shell
-sudo dnf update --refresh -y && sudo dnf distro-sync --refresh -y && sudo dnf autoremove -y
-```
- 
-**Upgrade System**
-```shell
-sudo dnf upgrade --refresh -y
-sudo dnf install dnf-plugin-system-upgrade -y
-sudo dnf system-upgrade download --releasever=40
-sudo dnf system-upgrade reboot
-```
-
-**Configure dnf.conf**
+Configure dnf.conf
 ```shell
 sudo tee -a /etc/dnf/dnf.conf << EOF
 max_parallel_downloads=6
@@ -28,6 +9,25 @@ EOF
 
 ```shell
 sudo nano /etc/dnf/dnf.conf
+```
+
+Update System
+```shell
+sudo dnf update --refresh
+sudo dnf distro-sync --refresh
+sudo dnf autoremove
+```
+
+```shell
+sudo dnf update --refresh -y && sudo dnf distro-sync --refresh -y && sudo dnf autoremove -y
+```
+ 
+Upgrade System
+```bash
+sudo dnf upgrade --refresh -y
+sudo dnf install dnf-plugin-system-upgrade -y
+sudo dnf system-upgrade download --releasever=40
+sudo dnf system-upgrade reboot
 ```
  
 **Install RPM Fusion Repositories (Free and Nonfree)**
