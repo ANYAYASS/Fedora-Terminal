@@ -59,3 +59,4 @@ Add Mullvad / Tor Browser to your desktop's application menu
 ```shell
 ./start-tor-browser.desktop --register-app
 ```
+
