@@ -7,7 +7,7 @@ defaultyes=True
 EOF
 ```
 
-```shell
+```bash
 sudo nano /etc/dnf/dnf.conf
 ```
 
