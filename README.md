@@ -1,5 +1,5 @@
 Configure dnf.conf
-```bash
+```shell
 sudo tee -a /etc/dnf/dnf.conf << EOF
 max_parallel_downloads=6
 fastestmirror=True
@@ -7,7 +7,7 @@ defaultyes=True
 EOF
 ```
 
-```bash
+```shell
 sudo nano /etc/dnf/dnf.conf
 ```
 
